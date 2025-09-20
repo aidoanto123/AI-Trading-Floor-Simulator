@@ -1,0 +1,1 @@
+pip install gradio plotly pydantic requests python-dotenv mcp fastmcp pandas uv
