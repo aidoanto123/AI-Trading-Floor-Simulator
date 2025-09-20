@@ -55,7 +55,5 @@ This project blends **LLM-powered decision-making**, **real market data**, **per
 git clone https://github.com/your-username/ai-trading-floor.git
 cd ai-trading-floor
 
-## 2. Install dependencies
-```bash
-pip install -r requirements.txt
+
 
