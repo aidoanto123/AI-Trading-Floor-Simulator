@@ -69,7 +69,7 @@ This project blends **LLM-powered decision-making**, **real market data**, **per
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/ai-trading-floor.git
+   git clone https://github.com/aidoanto123/ai-trading-floor.git
    cd ai-trading-floor
 
 2. `Install dependencies`
