@@ -1,4 +1,4 @@
-# 📈 AI Trading Floor Simulator
+# 📈 AI Trading Floor Simulator Using MCP
 
 An experimental **AI-driven stock trading simulation** where autonomous trader agents manage portfolios using distinct strategies.  
 This project blends **LLM-powered decision-making**, **real market data**, **persistent accounts**, and a **Gradio dashboard** for monitoring.  
