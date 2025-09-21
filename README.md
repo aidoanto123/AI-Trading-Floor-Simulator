@@ -67,10 +67,10 @@ This project blends **LLM-powered decision-making**, **real market data**, **per
 
 ## ⚙️ Setup
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/your-username/ai-trading-floor.git
-cd ai-trading-floor
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd <repository-name>
 
 2. `Install dependencies`
   ~~~bash
@@ -80,26 +80,12 @@ cd ai-trading-floor
 3. `Set environment variables`
   Create a `.env` file in the project root:
   ~~~env
-# Polygon.io API
-POLYGON_API_KEY=your_polygon_api_key
-POLYGON_PLAN=free   # or "paid", "realtime"
-
-# Push notifications (optional)
-PUSHOVER_USER=your_pushover_user_key
-PUSHOVER_TOKEN=your_pushover_app_token
-
-# Scheduler
-RUN_EVERY_N_MINUTES=60
-RUN_EVEN_WHEN_MARKET_IS_CLOSED=false
-USE_MANY_MODELS=false
-
-# AI API Keys (optional, for agent orchestration)
-DEEPSEEK_API_KEY=...
-GOOGLE_API_KEY=...
-GROK_API_KEY=...
-OPENROUTER_API_KEY=...
-
+  OPENAI_API_KEY=<your-openai-api-key>
+  PUSHOVER_TOKEN=<your-pushover-token>
+  PUSHOVER_USER=<your-pushover-user>
+  SERPER_API_KEY=<your-serper-api-key>
   ~~~
+
 
 
 
