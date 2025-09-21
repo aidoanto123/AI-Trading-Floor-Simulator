@@ -119,4 +119,14 @@ python trading_floor.py
 
 ---
 
+## 🛠️ Tech Stack
+
+- **Python** – agents, orchestration, servers  
+- **Pydantic** – data validation  
+- **SQLite** – persistence  
+- **Gradio + Plotly** – dashboard  
+- **Polygon.io API** – market data  
+- **MCP (Model Context Protocol)** – modular servers & clients  
+
+
 
