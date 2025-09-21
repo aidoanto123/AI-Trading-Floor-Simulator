@@ -45,6 +45,23 @@ This project blends **LLM-powered decision-making**, **real market data**, **per
 
 ## 📂 Project Structure
 
+- **`account_client.py`**: MCP client for accessing account tools and reading account/strategy resources.  
+- **`account_server.py`**: MCP server exposing account operations (balances, holdings, buy/sell, strategy updates).  
+- **`accounts.py`**: Core account and transaction management, including balances, holdings, and reports.  
+- **`app.py`**: Gradio + Plotly web dashboard for visualizing portfolios, transactions, and logs.  
+- **`database.py`**: SQLite-backed persistence layer for accounts, transaction logs, and market history.  
+- **`market.py`**: Market data integration using Polygon.io API with offline/simulated fallback.  
+- **`market_server.py`**: MCP server providing stock price lookup tools.  
+- **`push_server.py`**: MCP server for sending push notifications (e.g., Pushover).  
+- **`reset.py`**: Script to reset trader accounts with their predefined strategies.  
+- **`templates.py`**: Instruction templates for trader agents’ decision-making.  
+- **`tracers.py`**: Logging and tracing utilities for agent runs.  
+- **`trader_server.py`**: MCP server exposing trader actions and decision-making tools.  
+- **`traders.py`**: Trader agent orchestration and strategy execution logic.  
+- **`trading_floor.py`**: Main scheduler that automates trading runs at fixed intervals.  
+- **`util.py`**: Shared utilities including CSS, JS, and color settings for UI components.  
+- **`mcp_params.py`**: Centralized MCP server configuration parameters.  
+
 
 ---
 
@@ -54,6 +71,35 @@ This project blends **LLM-powered decision-making**, **real market data**, **per
 ```bash
 git clone https://github.com/your-username/ai-trading-floor.git
 cd ai-trading-floor
+
+2. `Install dependencies`
+  ~~~bash
+  pip install -r requirements.txt
+  ~~~
+
+3. `Set environment variables`
+  Create a `.env` file in the project root:
+  ~~~env
+# Polygon.io API
+POLYGON_API_KEY=your_polygon_api_key
+POLYGON_PLAN=free   # or "paid", "realtime"
+
+# Push notifications (optional)
+PUSHOVER_USER=your_pushover_user_key
+PUSHOVER_TOKEN=your_pushover_app_token
+
+# Scheduler
+RUN_EVERY_N_MINUTES=60
+RUN_EVEN_WHEN_MARKET_IS_CLOSED=false
+USE_MANY_MODELS=false
+
+# AI API Keys (optional, for agent orchestration)
+DEEPSEEK_API_KEY=...
+GOOGLE_API_KEY=...
+GROK_API_KEY=...
+OPENROUTER_API_KEY=...
+
+  ~~~
 
 
 
