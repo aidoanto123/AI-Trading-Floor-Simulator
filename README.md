@@ -119,24 +119,4 @@ python trading_floor.py
 
 ---
 
-## Requirements 📋
-- **`Python`**: 3.8+
-- **`Libraries`**:
-  - gradio
-  - langchain
-  - langchain-openai
-  - langgraph
-  - playwright
-  - python-dotenv
-  - requests
-  - pydantic
-  - langchain-community
-  - langchain-experimental
-- **`API Keys`**:
-  - OpenAI
-  - Google Serper
-  - Pushover
-
----
-
 
