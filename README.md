@@ -69,8 +69,8 @@ This project blends **LLM-powered decision-making**, **real market data**, **per
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd <repository-name>
+   git clone https://github.com/your-username/ai-trading-floor.git
+   cd ai-trading-floor
 
 2. `Install dependencies`
   ~~~bash
@@ -80,12 +80,63 @@ This project blends **LLM-powered decision-making**, **real market data**, **per
 3. `Set environment variables`
   Create a `.env` file in the project root:
   ~~~env
-  OPENAI_API_KEY=<your-openai-api-key>
-  PUSHOVER_TOKEN=<your-pushover-token>
-  PUSHOVER_USER=<your-pushover-user>
-  SERPER_API_KEY=<your-serper-api-key>
+  # Polygon.io API
+  POLYGON_API_KEY=your_polygon_api_key
+  POLYGON_PLAN=free   # or "paid", "realtime"
+
+  # Push notifications (optional)
+  PUSHOVER_USER=your_pushover_user_key
+  PUSHOVER_TOKEN=your_pushover_app_token
+
+  # Scheduler
+  RUN_EVERY_N_MINUTES=60
+  RUN_EVEN_WHEN_MARKET_IS_CLOSED=false
+  USE_MANY_MODELS=false
+
+  # AI API Keys (optional, for agent orchestration)
+  DEEPSEEK_API_KEY=...
+  GOOGLE_API_KEY=...
+  GROK_API_KEY=...
+  OPENROUTER_API_KEY=...
   ~~~
 
+# `▶️ Usage`
 
+### `Launch the application`
+~~~bash
+python app.py
+~~~
+
+### `Reset trader accounts`
+~~~bash
+python reset.py
+~~~
+
+### `Start automated trading loop`
+~~~bash
+python trading_floor.py
+~~~
+
+---
+
+## Requirements 📋
+- **`Python`**: 3.8+
+- **`Libraries`**:
+  - gradio
+  - langchain
+  - langchain-openai
+  - langgraph
+  - playwright
+  - python-dotenv
+  - requests
+  - pydantic
+  - langchain-community
+  - langchain-experimental
+- **`API Keys`**:
+  - OpenAI
+  - Google Serper
+  - Pushover
+
+---
 
 
